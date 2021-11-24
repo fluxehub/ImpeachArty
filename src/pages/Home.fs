@@ -1,7 +1,10 @@
 module App.Pages.Home
 
+open App
+
 open Feliz
 open Extensions
+open Components.Quote
 
 let logo = StaticFile.import "../assets/compsoc.png"
 
@@ -28,7 +31,7 @@ let HomePage () =
             ]
 
             Html.p [
-                prop.classes [ tw.``text-white``; tw.``text-xl``; tw.``font-medium``; tw.``my-8``; tw.``text-center``; tw.``opacity-90`` ]
+                prop.classes [ tw.``text-white``; tw.``text-xl``; tw.``font-medium``; tw.``mt-8``; tw.``mb-16``; tw.``text-center``; tw.``opacity-90`` ]
                 
                 prop.children [
                     Html.text "For too long, CompSoc has been ruled with an iron fist by a series of increasingly evil leaders. \
@@ -41,5 +44,9 @@ let HomePage () =
                     Html.text "."
                 ]
             ]
+
+            Quote { Author = "Paul Clavier"; Quote = "Test quote to fill out space lorem ipsum dolor sit amet, consectetur adipiscing elit. \
+                                                      Praesent id vulputate lorem. Nunc ut nisi at neque elementum finibus. \
+                                                      Class aptent taciti sociosqu ad litora." }
         ]
     ]
