@@ -5,6 +5,7 @@
 
 *.config.js linguist-detectable=false
 webpack.* linguist-detectable=false
+tailwind-process.js linguist-detectable=false
 
 ###############################################################################
 # Set default behavior for command prompt diff.
