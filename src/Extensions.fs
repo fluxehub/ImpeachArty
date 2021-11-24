@@ -6,16 +6,12 @@ open Fable.Core
 open Fable.Core.JsInterop
 open Zanaptak.TypedCssClasses
 
+[<AutoOpen>]
 module Tailwind =
     // Configure type provider to use generated Tailwind classes.
     // Naming.Verbatim is required for PurgeCSS bundle reduction, see https://tailwindcss.com/docs/optimizing-for-production
     type tw =
-        CssClasses<
-            "styles/global.css"
-            , Naming.Verbatim
-            , commandFile = "node"
-            , argumentPrefix = "../tailwind-process.js ../tailwind.config.js"
-        >
+        CssClasses<"styles/global.css", Naming.Verbatim, commandFile="node", argumentPrefix="../tailwind-process.js ../tailwind.config.js">
 
 [<RequireQualifiedAccess>]
 module StaticFile =
@@ -33,9 +29,11 @@ module Config =
     /// Tries to find the value of the configured variable if it is defined or returns a given default value otherwise.
     let variableOrDefault (key: string) (defaultValue: string) =
         let foundValue = variable key
-        if String.IsNullOrWhiteSpace foundValue
-        then defaultValue
-        else foundValue
+
+        if String.IsNullOrWhiteSpace foundValue then
+            defaultValue
+        else
+            foundValue
 
 // Stylesheet API
 // let private stylehsheet = Stylesheet.load "./fancy.css"
@@ -44,7 +42,7 @@ module Stylesheet =
 
     type IStylesheet =
         [<Emit "$0[$1]">]
-        abstract Item : className:string -> string
+        abstract Item : className: string -> string
 
     /// Loads a CSS module and makes the classes within available
     let inline load (path: string) = importDefault<IStylesheet> path
