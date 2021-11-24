@@ -4,6 +4,7 @@ open Feliz
 
 type QuoteProps = { Author: string; Quote: string; }
 
+[<ReactComponent>]
 let Quote props = Html.div [
     prop.classes [ tw.``w-full``; tw.``border-2``; tw.``p-4``; tw.``rounded-lg``; tw.``border-opacity-90`` ]
     
