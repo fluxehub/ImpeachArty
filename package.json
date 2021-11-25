@@ -11,6 +11,7 @@
         "test": "dotnet fable tests --outDir dist/tests && mocha dist/tests -r esm"
     },
     "dependencies": {
+        "@hcaptcha/react-hcaptcha": "^0.3.9",
         "bulma": "^0.9.1",
         "cssnano": "^5.0.11",
         "date-fns": "^2.16.1",

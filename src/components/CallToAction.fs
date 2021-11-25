@@ -13,7 +13,7 @@ let bolded (text: string) = Html.span [
 ]
 
 [<ReactComponent>]
-let CallToAction quote = 
+let CallToAction () = 
     React.fragment [
         Html.img [
             prop.src logo
@@ -30,7 +30,7 @@ let CallToAction quote =
             
             prop.children [
                 Html.text "For too long, CompSoc has been ruled with an iron fist by a series of increasingly evil leaders. \
-                        For the sake of the society that we live in, we the people "
+                           For the sake of the society that we live in, we the people "
                 bolded "must"
                 Html.text " demand better from those in power. We the people "
                 bolded "must"
@@ -39,6 +39,4 @@ let CallToAction quote =
                 Html.text "."
             ]
         ]
-
-        Quote quote
     ]
