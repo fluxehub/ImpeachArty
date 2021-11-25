@@ -30,7 +30,7 @@ let SignatureForm () =
             Html.input [
                 prop.classes <| tw.``h-12`` :: inputStyle
 
-                prop.style [ style.color "rgba(0,0,0,0.8)" ]
+                prop.style [ style.color "rgba(0, 0, 0, 0.8)" ]
 
                 prop.placeholder "Name"
             ]
@@ -38,7 +38,7 @@ let SignatureForm () =
             Html.input [
                 prop.classes <|  tw.``h-12`` :: inputStyle
 
-                prop.style [ style.color "rgba(0,0,0,0.8)" ]
+                prop.style [ style.color "rgba(0, 0, 0, 0.8)" ]
 
                 prop.placeholder "Link (optional)"
             ]
@@ -46,7 +46,7 @@ let SignatureForm () =
             Html.textarea [
                 prop.classes <| tw.``h-80`` :: inputStyle
 
-                prop.style [ style.color "rgba(0,0,0,0.8)" ]
+                prop.style [ style.color "rgba(0, 0, 0, 0.8)" ]
 
                 prop.maxLength 750
 
