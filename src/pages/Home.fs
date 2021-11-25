@@ -26,9 +26,8 @@ let HomePage () =
                                                             Praesent id vulputate lorem. Nunc ut nisi at neque elementum finibus. \
                                                             Class aptent taciti sociosqu ad litora." }
 
-                    
                     Html.a [
-                        prop.classes [ tw.``bg-white``; tw.``text-xl``; tw.``font-medium``; tw.``my-8``; tw.``p-2``; tw.``rounded-lg``; tw.``text-center``; tw.``opacity-90`` ]
+                        prop.classes [ tw.``bg-white``; tw.``text-xl``; tw.``font-medium``; tw.``my-4``; tw.``p-2``; tw.``rounded-lg``; tw.``text-center``; tw.``opacity-90`` ]
                         prop.text "View Submissions"
                     ]
                 ]
