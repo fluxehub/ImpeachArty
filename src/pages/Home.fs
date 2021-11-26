@@ -3,10 +3,10 @@ module App.Pages.Home
 open App
 
 open Feliz
-open Extensions
 open Components.CallToAction
 open Components.Quote
 open Components.SignatureForm
+open Components.Footer
 
 [<ReactComponent>]
 let HomePage () =
@@ -27,8 +27,8 @@ let HomePage () =
                                                             Class aptent taciti sociosqu ad litora." }
 
                     Html.a [
-                        prop.classes [ tw.``bg-white``; tw.``text-xl``; tw.``font-medium``; tw.``my-6``; tw.``py-2``; tw.``px-4``; tw.``rounded-lg``; tw.``text-center``; tw.``opacity-90`` ]
-                        prop.text "View Submissions"
+                        prop.classes [ tw.``bg-white``; tw.``text-xl``; tw.``font-medium``; tw.``my-6``; tw.``py-2``; tw.``px-4``; tw.``rounded-lg``; tw.``text-center``; tw.``opacity-100`` ]
+                        prop.text "View Signatures"
                     ]
                 ]
             ]
@@ -56,5 +56,7 @@ let HomePage () =
                     SignatureForm ()
                 ]
             ]
+
+            Footer ()
         ]
     ]

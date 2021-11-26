@@ -7,8 +7,10 @@
     <Compile Include="Extensions.fs" />
     <Compile Include="components/Quote.fs" />
     <Compile Include="components/CallToAction.fs" />
+    <Compile Include="components/Footer.fs" />
     <Compile Include="components/SignatureForm.fs" />
     <Compile Include="pages/Home.fs" />
+    <Compile Include="pages/Submissions.fs" />
     <Compile Include="Main.fs" />
   </ItemGroup>
   <ItemGroup>

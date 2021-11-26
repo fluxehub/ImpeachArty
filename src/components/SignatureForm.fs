@@ -46,7 +46,10 @@ let SignatureForm () =
             Html.textarea [
                 prop.classes <| tw.``h-80`` :: inputStyle
 
-                prop.style [ style.color "rgba(0, 0, 0, 0.8)" ]
+                prop.style [ 
+                    style.color "rgba(0, 0, 0, 0.8)" 
+                    style.maxHeight 500
+                ]
 
                 prop.maxLength 750
 
